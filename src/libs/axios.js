@@ -36,7 +36,7 @@ http.interceptors.response.use(
     console.log(response)
     let result = response.data
     // 输出每次的请求
-    // console.info([${ response.config.method }], result, ${ response.config.url })
+    console.info([${ response.config.method }], result, ${ response.config.url })
     store.commit(UPDATE_REQUEST_COUNT, -1)
     // 请求失败
     if (![200, 201].includes(result.status.code)) {

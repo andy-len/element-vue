@@ -1,10 +1,11 @@
-import app from "./../App.vue";
+import index from "./../view/index.vue";
+// import app from "./../App.vue";
 
 export default [
   {
     path: "/",
     redirect: "/hello",
-    component: app,
+    component: index,
     meta: {
       hideInMenu: true,
       notCache: true

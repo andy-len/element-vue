@@ -24,6 +24,7 @@ module.exports = {
   //       .set("_img", resolve("src/assets/img"));
   //   },
   devServer: {
+    port: 8088,
     proxy: {
       "/": {
         // /api/..
