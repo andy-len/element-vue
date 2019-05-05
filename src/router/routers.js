@@ -4,18 +4,26 @@ import index from "./../view/layouts/index.vue"
 export default [
   {
     path: '/',
-    redirect: '/systemTool'
+    redirect: '/systemTool/dictionaryManage'
   },
   {
-    path: "/",
-    redirect: "/index",
+    path: "/systemTool",
     component: index,
     children: [
       {
-        path: "/systemTool",
-        name: "systemTool",
+        path: "dictionaryManage",
+        name: "dictionaryManage",
         component: () => import("./../view/pages/systemTool/dictionaryManage.vue")
       }
     ]
   }
+  // {
+  //   path: "/hello",
+  //   redirect: "/hello",
+  //   component: app,
+  //   meta: {
+  //     hideInMenu: true,
+  //     notCache: true
+  //   }
+  // }
 ];
