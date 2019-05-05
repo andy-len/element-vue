@@ -1,33 +1,21 @@
-import app from "./../App.vue";
+// import app from "./../App.vue";
+import index from "./../view/layouts/index.vue"
 
 export default [
   {
+    path: '/',
+    redirect: '/systemTool'
+  },
+  {
     path: "/",
-    redirect: "/hello",
-    component: app,
-    meta: {
-      hideInMenu: true,
-      notCache: true
-    },
+    redirect: "/index",
+    component: index,
     children: [
       {
-        path: "/hello",
-        name: "hello",
-        component: () => import("./../view/test/helloWorld.vue"),
-        meta: {
-          hideInMenu: true,
-          notCache: true
-        }
+        path: "/systemTool",
+        name: "systemTool",
+        component: () => import("./../view/pages/systemTool/dictionaryManage.vue")
       }
     ]
   }
-  // {
-  //   path: "/hello",
-  //   redirect: "/hello",
-  //   component: app,
-  //   meta: {
-  //     hideInMenu: true,
-  //     notCache: true
-  //   }
-  // }
 ];
